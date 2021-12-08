@@ -1,0 +1,39 @@
+.feed-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 10px 0px 10px 10px;
+    margin: 10px;
+}
+
+.content-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.icon-call {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.color-answered {
+    color: #00FF00;
+}
+
+.color-missed {
+    color: #FF0000;
+}
+
+.color-voicemail {
+    color: #0000FF;
+}
