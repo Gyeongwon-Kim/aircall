@@ -9,7 +9,7 @@
     justify-content: space-between;
     align-items: center;
     
-    border: 1px solid #000;
+    border: 1px solid #000000;
     border-radius: 8px;
     padding: 10px 0px 10px 10px;
     margin: 10px;
@@ -21,13 +21,27 @@
     align-items: center;
 }
 
+.time-box {
+    color: #808080;
+    font-size: 11px;
+}
+
 .icon-call {
     font-size: 14px;
     margin-right: 10px;
 }
 
+.phone-num {
+    font-weight: 700;
+}
+
+.desc {
+    font-size: 11px;
+    color: #808080;
+}
+
 .color-answered {
-    color: #00FF00;
+    color: #008000;
 }
 
 .color-missed {
@@ -36,4 +50,22 @@
 
 .color-voicemail {
     color: #0000FF;
+}
+
+.divider {
+    display: flex;
+    justify-content: center;
+    color: #808080;
+    font-size: 11px;
+}
+
+.divider:before, .divider:after {
+    content: "";
+    flex-grow: 1;
+    margin: 0px 16px;
+    background: rgba(0, 0, 0, 0.35);
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+    align-self: center;
 }
