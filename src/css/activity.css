@@ -1,3 +1,4 @@
+/* Header */
 svg {
     width: unset !important;
     margin-left: 20px;
@@ -51,6 +52,7 @@ header {
     background-color: #FFFFFF;
 }
 
+/* Activity Feed */
 .feed-box {
     display: flex;
     flex-direction: column;
@@ -138,4 +140,20 @@ header {
     font-size: 0px;
     line-height: 0px;
     align-self: center;
+}
+
+/* Activity Detail */
+.detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #E0E0E0;
+    margin: 20px;
+    padding: 20px;
+}
+
+.icon-user {
+    font-size: 100px;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from './Header.jsx';
 import ActivityFeed from './components/activity/ActivityFeed.jsx';
@@ -11,10 +11,10 @@ const App = () => {
     <Router>
       <div className='container'>
         <Header/>
-        <Switch>
-          <Route exact path='/' component={ActivityFeed} />
-          <Route exact path='/detail/:id' component={ActivityDetail} />
-        </Switch>
+        <Routes>
+          <Route path='/' element={<ActivityFeed/>} />
+          <Route path='/detail/:id' element={<ActivityDetail/>} />
+        </Routes>
       </div>
     </Router>
   );
