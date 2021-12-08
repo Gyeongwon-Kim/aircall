@@ -1,5 +1,5 @@
 import React, {useState, useEffect}  from 'react';
-import ActivityDetail from './ActivityDetail.jsx';
+import ActivityBox from './ActivityBox.jsx';
 
 const ActivityFeed = () => {
     const [activities, setActivities] = useState([]);
@@ -9,7 +9,7 @@ const ActivityFeed = () => {
                 return res.json();
             })
             .then(data => {
-                console.log('data', data)
+                data.filter(e => e.is_archived == false);
                 setActivities(data);
             })
     }, [])
@@ -17,7 +17,7 @@ const ActivityFeed = () => {
         (
         <div className="feed-box">
             {activities.map(activity => (
-                <ActivityDetail key={activity.id} activity={activity}/>
+                <ActivityBox key={activity.id} activity={activity}/>
             ))}
         </div>
         )
