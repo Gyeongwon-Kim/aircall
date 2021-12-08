@@ -1,16 +1,16 @@
 import React from 'react';
 
-const Navbar = (props) => {
+const Navbar = () => {
 
     function filterActivityFeed(isArchived) {
-        props.setArchivedStatus(isArchived);
+
     }
 
     return (
         (
         <div className="navbar">
-            <button className="nav-box" onClick={() => filterActivityFeed(false)}>Inbox</button>
-            <button className="nav-box" onClick={() => filterActivityFeed(true)}>Archived</button>
+            <button className="nav-box nav-box-left" onClick={() => filterActivityFeed(false)}>Inbox</button>
+            <button className="nav-box nav-box-right" onClick={() => filterActivityFeed(true)}>Archived</button>
         </div>
         )
     );

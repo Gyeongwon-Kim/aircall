@@ -24,13 +24,23 @@ header {
     align-items: center;
     justify-content: center;
 
-    width: 70px;
-    height: 25px;
-    border: 1px solid #000000;
-    border-radius: 8px;
+    width: 100px;
+    height: 30px;
+    border: 3px solid #E0E0E0;
 
     font-weight: 700;
-    background-color: #F0F0F0;
+    background-color: #FFFFFF;
+}
+
+.nav-box-left {
+    border-right: none;
+    border-top-left-radius : 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.nav-box-right {
+    border-top-right-radius : 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .nav-box:hover {
@@ -52,10 +62,11 @@ header {
     justify-content: space-between;
     align-items: center;
     
-    border: 1px solid #000000;
+    border: 3px solid #F0F0F0;
     border-radius: 8px;
     padding: 10px 2px 10px 10px;
     margin: 10px;
+    background-color: #FFFFFF;
 }
 
 .content-box {
@@ -76,6 +87,7 @@ header {
 
 .phone-num {
     font-weight: 700;
+    color: #000000;
 }
 
 .desc {
@@ -93,6 +105,10 @@ header {
 
 .color-voicemail {
     color: #0000FF;
+}
+
+.no-underline {
+    text-decoration: none;
 }
 
 .divider {
