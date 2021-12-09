@@ -1,62 +1,21 @@
-## Summary
+## Assessment Completion Status
+[O] Design Activity List and Detail pages.<br />
+[O] Fetch GET API and display ActivityFeed contents.<br />
+[O] Create Routes and pass the value through URL && Receive the data from a different component.<br />
+[O] Fetch GET API and display ActivityDetail content.<br />
+[O] Create POST API to update a individual call object, and connect it with a button named 'Archive' or 'Unarchive'.<br />
+[X] Create a button to reset all the calls to be the status 'Unarchived' && Add a button to the main page that archives all the calls at a time.<br />
+[X] Create a back button in the detail page to redirect to the main page.<br />
+[X] Add functionality to the tabs 'Inbox' and 'Archived' to filter the desired data to be displayed.<br />
 
-The goal of this test is to make you code a small ReactJS app. We have prepared a skeleton app for you, but please change whatever you want (CSS files, HTML structure, JS structure, etc).
-
-The app will have two different components:
-- **Activity Feed** - simple list of calls
-- **Activity Detail** - detail of a call
-- **Archive** - the final user should be able to archive (and unarchive) a call. Archived calls will no longer be displayed on the Activity Feed and should have a separate Archived Tab.
-
-Show us what you can do in 24 hours. You will be assessed on the following parameters: 
-- Focus on design (Pay attention to the UI/UX and transitions)
-- Best React Practices
-- Code Readability and Maintainability
-
-## Submission
-After you're done with the assignment, please submit a link to the **GitHub/Bitbucket repository** (make sure it's public) with your code **AND** a deployment link where our recruiters can interact with the live version. You can use freely available tools like **Netlify, Vercel, Heroku, etc** to deploy your React application.
-
-**Note:** Submissions without a valid repository and deployment link will be removed from any further consideration.
-
-To give you an idea, here's what our app looks like:
-
-
-![app](https://user-images.githubusercontent.com/630714/29357034-763d7216-8276-11e7-8bcb-e77d9645dfcc.png)
-
-## Installation
-
-We're using [yarn](https://yarnpkg.com) here (but you can use npm):
-
+## What I have learned
+As the version of 'react-router-dom' is updated to 6, the tag 'Switch' and the attribute 'exact' in the 'Route' does not longer exist and be used.<br />
+We should add the setting below to prevent the routing from allowing routing only to the root.<br />
 ```
-yarn install
-yarn start
-```
-
-## API documentation
-
-### Routes
-
-Here is the API address: https://aircall-job.herokuapp.com.
-
-As you can see, it's hosted on a free Heroku server, which means that the first time you will fetch the API, it will take few seconds to answer.
-
-- **GET** - https://aircall-job.herokuapp.com/activities: get calls to display in the Activity Feed
-- **GET** - https://aircall-job.herokuapp.com/activities/:id: retrieve a specific call details
-- **POST** - https://aircall-job.herokuapp.com/activities/:id: update a call. The only field updatable is `is_archived (bool)`. You'll need to send a JSON in the request body:
-```
-{
-  is_archived: true
+devServer: {
+  historyApiFallback: true
 }
 ```
-- **GET** - https://aircall-job.herokuapp.com/reset: Reset all calls to initial state (usefull if you archived all calls).
 
-### Call object
-
-- **id** - unique ID of call
-- **created_at** - creation date
-- **direction** - `inbound` or `outbound` call
-- **from** - caller's number
-- **to** - callee's number
-- **via** - Aircall number used for the call
-- **duration** - duration of a call (in seconds)
-- **is_archived** - call is archived or not
-- **call_type** - can be a `missed`, `answered` or `voicemail` call.
+## Future plan
+Mostly, I have struggled with dealing with 'state' that makes the web application dynamically. I have newly tried applying Redux to the project for the first time, but it was time consuming procedure to absorb and use the knowledge of it at the same time. My next step will be knowing how to handle states using Redux for my better React practice, and believe this will help myself to use the React Framework in a proper manner.
