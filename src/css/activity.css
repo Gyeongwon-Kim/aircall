@@ -149,11 +149,49 @@ header {
     align-items: center;
     justify-content: center;
 
-    border: 2px solid #E0E0E0;
+    border: 3px solid #E0E0E0;
     margin: 20px;
     padding: 20px;
 }
 
 .icon-user {
     font-size: 100px;
+    color: #808080;
+}
+
+.detail-username {
+    font-size: 20px;
+}
+
+.detail-phone-num {
+    font-size: 16px;
+    color: #707070;
+    margin-top: 5px;
+}
+
+.detail-content-box {
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid #707070;
+    border-radius: 6px;
+    margin-top: 10px;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+}
+
+.detail-content-box div {
+    margin-top: 5px;
+}
+
+.button-archive {
+    margin-top: 10px;
+    width: 200px;
+    height: 40px;
+    box-shadow: 1px 1px #888888;
+    border: 2px solid #F9F9F9;
+    border-radius: 6px;
+    background-color: #000000;
+    color: #FFFFFF;
 }
