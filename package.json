@@ -8,15 +8,14 @@
   "license": "",
   "private": false,
   "scripts": {
-    "heroku-prebuild": "npm install --dev",
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
   "dependencies": {
     "axios": "^0.24.0",
     "moment": "^2.29.1",
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
+    "react": "next",
+    "react-dom": "next",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.0.2",
     "redux": "^4.1.2"
