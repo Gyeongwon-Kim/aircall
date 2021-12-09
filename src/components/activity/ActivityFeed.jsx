@@ -1,9 +1,11 @@
 import React, {useState, useEffect}  from 'react';
+import { useSelector } from 'react-redux';
+
 import ActivityBox from './ActivityBox.jsx';
 
 const ActivityFeed = () => {
     const [activities, setActivities] = useState([]);
-    const [archived, setArchived] = useState([]);
+    const isArchivedFeeds = useSelector( (state) => state );
 
     useEffect(() => {
         fetch("https://aircall-job.herokuapp.com/activities")
@@ -11,11 +13,11 @@ const ActivityFeed = () => {
                 return res.json();
             })
             .then(data => {
-                data = data.filter(e => e.is_archived == archived);
+                data = data.filter(e => e.is_archived == isArchivedFeeds);
                 setActivities(data);
             })
     }, [])
-    
+
     return (
         (
         <div className="feed-box">

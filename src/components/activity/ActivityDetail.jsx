@@ -32,7 +32,6 @@ const ActivityDetail = (props) => {
                 activity.is_archived = status;
                 setActivity(activity);
             }
-            console.log('res', res);
         })
     }
     return (
