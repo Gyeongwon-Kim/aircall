@@ -10,6 +10,13 @@
 
 ## What I have learned
 As the version of 'react-router-dom' is updated to 6, the tag 'Switch' and the attribute 'exact' in the 'Route' does not longer exist and be used.<br />
+```
+<Router>
+  <Routes>
+    <Route path='/' element={<ActivityFeed/>} />
+  </Routes>
+</Router>
+```
 We should add the setting below to prevent the routing from allowing routing only to the root.<br />
 ```
 devServer: {
